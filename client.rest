@@ -1,0 +1,10 @@
+POST "http://localhost:5000/todos/save"
+Content-Type: application/json
+
+{
+    "name":"Kanishka",
+    "description":"Hey I am a WEB-Developer"
+}
+
+###
+GET "http://localhost:5000/todos/display"
