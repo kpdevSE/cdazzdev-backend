@@ -11,7 +11,9 @@ app.use(bodyParser.json());
 app.use(routes);
 
 const studentRouter = require("./Routes/StudentsRouter");
+const courseRouter = require("./Routes/CourseRouter");
 app.use("/api/v1/student", studentRouter);
+app.use("/api/v2/course", courseRouter);
 
 app.get("*", (req, res) => {
   res.status(404).json("Page not found");
