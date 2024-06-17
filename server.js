@@ -3,12 +3,10 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const PORT = 5000;
-const connection = require("../backend/Config/Config");
-const routes = require("../backend/Routes/List");
+const connection = require("../cdazzdev-backend/Config/Config");
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(routes);
 
 const studentRouter = require("./Routes/StudentsRouter");
 const courseRouter = require("./Routes/CourseRouter");

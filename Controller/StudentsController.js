@@ -2,8 +2,8 @@ const Students = require("../Models/Students");
 
 const getStudents = async (req, res) => {
   try {
-    const { name, email, age, course } = req.body;
-    if (!name || !email || !age || !course) {
+    const { name, email, age, course, address, studentId } = req.body;
+    if (!name || !email || !age || !course || !address || !studentId) {
       res.status(400).json("input feild cant be empty");
     } else {
       const newData = await Students.create({
@@ -11,6 +11,8 @@ const getStudents = async (req, res) => {
         email: email,
         age: age,
         course: course,
+        address: address,
+        studentId: studentId,
       });
       return newData;
     }

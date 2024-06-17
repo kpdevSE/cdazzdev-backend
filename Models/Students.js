@@ -17,6 +17,14 @@ const students = new mongoose.Schema({
     type: String,
     require: true,
   },
+  studentId: {
+    type: String,
+    require: true,
+  },
+  address: {
+    type: String,
+    require: true,
+  },
 });
 
 module.exports = mongoose.model("Students", students);
